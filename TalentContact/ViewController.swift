@@ -10,15 +10,15 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
-    @IBOutlet weak var txtFirstName: UITextField!
+    @IBOutlet weak var textFieldFirstName: UITextField!
     
-    @IBOutlet weak var txtLastName: UITextField!
+    @IBOutlet weak var textFieldLastName: UITextField!
     
-    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var textFieldAddress: UITextField!
     
-    @IBOutlet weak var TxtEmailAddress: UITextField!
+    @IBOutlet weak var textFieldDescription: UITextField!
     
-    @IBOutlet weak var txtDateOfBirth: UITextField!
+    @IBOutlet weak var picView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -33,45 +33,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
   
     @IBAction func AddContact(_ sender: Any) {
-        let FirstName = txtFirstName.text!
-        let LastName = txtLastName.text!
-        let Address = txtAddress.text!
-        let EmailAddress = TxtEmailAddress!
-        let DteofBirth = txtDateOfBirth!
-        
-        
+        let FirstName = textFieldFirstName.text!
+        let LastName = textFieldLastName.text!
+        let Address = textFieldAddress.text!
+        let Description = textFieldDescription.text!
     }
     
-    
-    /*
-     @IBAction func addProductButton(_ sender: UIButton) {
-         let code = codeTextField.text!
-         let name = nameTextField.text!
-         let price = Double(priceTextField.text!)
-         let quantity = Int( quantityTextField.text!)
-         let image = picView.image
-         let product = Product(code: code, name: name, price: price!, quantity: quantity!, pic: image!)
-         
-         var products = readData()
-         products.append(product)
-     //save the list products into userdefaults
-         
-         let data = try! NSKeyedArchiver.archivedData(withRootObject: products, requiringSecureCoding: false)
-         UserDefaults.standard.set(data, forKey: "products")
-         
-         //Should be a alert window code but I am writing console print statement for testing purpose
-         
-         print("Done")
-         
-         
-     }
-     */
+    @IBAction func CancelAddScreen(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func DeleteContact(_ sender: Any) {
     }
         
         // Add or update contact info
-    @IBOutlet weak var picView: UIImageView!
+    
     
 
     @IBAction func UploadPhoto(_ sender: UIButton) {
@@ -82,6 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(picker, animated: true, completion: nil)
          
     }
+    
     @IBAction func AddImagepickerallowsEditingfalsepickersourceTypephotoLibrarypickerdelegateselfpresentpickeranimatedtruecompletionnil(_ sender: Any) {
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
