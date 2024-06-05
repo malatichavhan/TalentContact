@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
     @IBOutlet weak var textFieldFirstName: UITextField!
     
     @IBOutlet weak var textFieldLastName: UITextField!
@@ -20,52 +19,51 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var picView: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func UpdateContact(_ sender: Any) {
-        
         // Add or update contact info
+    }
+    
+    @IBAction func DeleteContact(_ sender: Any) {
+        
     }
     
   
     @IBAction func AddContact(_ sender: Any) {
-        let FirstName = textFieldFirstName.text!
-        let LastName = textFieldLastName.text!
-        let Address = textFieldAddress.text!
-        let Description = textFieldDescription.text!
+        let firstName = textFieldFirstName.text!
+        let lastName = textFieldLastName.text!
+        let address = textFieldAddress.text!
+        let description = textFieldDescription.text!
+        let img = picView.image?.data!
+        let contact = Contact(firstName: firstName, lastName: lastName, address: address, description: description,image: img!)
+        ContactStore().add(contact)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func CancelAddScreen(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func DeleteContact(_ sender: Any) {
-    }
-        
-        // Add or update contact info
-    
-    
-
     @IBAction func UploadPhoto(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.delegate = self
         present(picker, animated: true, completion: nil)
-         
     }
     
     @IBAction func AddImagepickerallowsEditingfalsepickersourceTypephotoLibrarypickerdelegateselfpresentpickeranimatedtruecompletionnil(_ sender: Any) {
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         picView.image = image
         dismiss(animated: true, completion: nil)
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
