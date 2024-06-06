@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		0B57283A2BE3128900DED8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5728382BE3128900DED8AA /* LaunchScreen.storyboard */; };
 		0B5728452BE3128900DED8AA /* TalentContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5728442BE3128900DED8AA /* TalentContactTests.swift */; };
 		0B5728502BE3128900DED8AA /* TalentContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B57284F2BE3128900DED8AA /* TalentContactUITests.swift */; };
+		A4FD57452C0D302A00404359 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = A4FD57442C0D302A00404359 /* SQLite */; };
+		A4FD574A2C0D341900404359 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD57492C0D341900404359 /* ContactStore.swift */; };
+		A4FD574E2C0D4C7D00404359 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD574D2C0D4C7D00404359 /* Contact.swift */; };
+		A4FD57542C0DCD9800404359 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD57532C0DCD9800404359 /* ContactTableViewCell.swift */; };
+		A4FD57562C0DE75800404359 /* ContactSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD57552C0DE75800404359 /* ContactSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		0B57282A2BE3128900DED8AA /* TalentContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B57282D2BE3128900DED8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B57282F2BE3128900DED8AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B5728312BE3128900DED8AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B5728312BE3128900DED8AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = TalentContact/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		0B5728342BE3128900DED8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B5728362BE3128900DED8AA /* img7jpg 2.jpeg.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "img7jpg 2.jpeg.xcassets"; sourceTree = "<group>"; };
 		0B5728392BE3128900DED8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,10 @@
 		0B57284B2BE3128900DED8AA /* TalentContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalentContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B57284F2BE3128900DED8AA /* TalentContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentContactUITests.swift; sourceTree = "<group>"; };
 		0B5728512BE3128900DED8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FD57492C0D341900404359 /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
+		A4FD574D2C0D4C7D00404359 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A4FD57532C0DCD9800404359 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		A4FD57552C0DE75800404359 /* ContactSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FD57452C0D302A00404359 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,10 @@
 				0B5728362BE3128900DED8AA /* img7jpg 2.jpeg.xcassets */,
 				0B5728382BE3128900DED8AA /* LaunchScreen.storyboard */,
 				0B57283B2BE3128900DED8AA /* Info.plist */,
+				A4FD57492C0D341900404359 /* ContactStore.swift */,
+				A4FD574D2C0D4C7D00404359 /* Contact.swift */,
+				A4FD57532C0DCD9800404359 /* ContactTableViewCell.swift */,
+				A4FD57552C0DE75800404359 /* ContactSearchController.swift */,
 			);
 			path = TalentContact;
 			sourceTree = "<group>";
@@ -144,6 +158,9 @@
 			dependencies = (
 			);
 			name = TalentContact;
+			packageProductDependencies = (
+				A4FD57442C0D302A00404359 /* SQLite */,
+			);
 			productName = TalentContact;
 			productReference = 0B57282A2BE3128900DED8AA /* TalentContact.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 0B5728212BE3128800DED8AA;
+			packageReferences = (
+				A4FD57432C0D2EBD00404359 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 0B57282B2BE3128900DED8AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,8 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FD574A2C0D341900404359 /* ContactStore.swift in Sources */,
 				0B5728322BE3128900DED8AA /* ViewController.swift in Sources */,
+				A4FD574E2C0D4C7D00404359 /* Contact.swift in Sources */,
+				A4FD57542C0DCD9800404359 /* ContactTableViewCell.swift in Sources */,
 				0B57282E2BE3128900DED8AA /* AppDelegate.swift in Sources */,
+				A4FD57562C0DE75800404359 /* ContactSearchController.swift in Sources */,
 				0B5728302BE3128900DED8AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4FD57432C0D2EBD00404359 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4FD57442C0D302A00404359 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4FD57432C0D2EBD00404359 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B5728222BE3128800DED8AA /* Project object */;
 }
